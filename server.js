@@ -1,8 +1,12 @@
 var express = require("express"),
     app = express()
 
+// middleware
+app.use(express.static(__dirname + '/app'))
+
+// routes
 app.get('/', function(req, res) {
-  res.send("Hello there :)")
+  res.sendFile("index.html")
 })
 
 app.listen(3000, function() {
