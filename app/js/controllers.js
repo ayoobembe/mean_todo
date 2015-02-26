@@ -7,4 +7,9 @@ app.controller("taskController", ["$scope", function($scope) {
       {"title": "Listen to more 'Thisnao'"}
     ]
 
+    $scope.addTask = function() {
+      $scope.tasks.push({ title: $scope.new_task});
+      $scope.new_task = '';
+    }
+
 }]);
